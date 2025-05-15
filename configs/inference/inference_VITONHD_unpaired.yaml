@@ -71,7 +71,7 @@ model:
 data:
   target: main.DataModuleFromConfig
   params:
-      batch_size: 10
+      batch_size: 6
       wrap: False
       train:
           target: ldm.data.dataset_VITONHD.try_on_dataset_VITONHD
