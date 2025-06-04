@@ -607,6 +607,7 @@ if __name__ == "__main__":
         del trainer_config["accelerator"]
         cpu = True
     else:
+        trainer_config["gpus"] = '0,1'
         gpuinfo = trainer_config["gpus"]
         print(f"Running on GPUs {gpuinfo}")
         cpu = False

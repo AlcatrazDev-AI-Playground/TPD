@@ -1,5 +1,5 @@
 import torch
-pretrained_model_path='../checkpoints/original/model.ckpt'
+pretrained_model_path='checkpoints/original/model.ckpt'
 ckpt_file=torch.load(pretrained_model_path,map_location='cpu')
 
 # add input conv mask channel
@@ -28,5 +28,5 @@ for key, value in state_dict.items():
 ckpt_file['state_dict'] = new_state_dict
 
 
-torch.save(ckpt_file,"../checkpoints/original/model_prepared.ckpt")
+torch.save(ckpt_file,"checkpoints/original/model_prepared.ckpt")
 
